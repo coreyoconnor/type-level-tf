@@ -1,15 +1,15 @@
 name:           type-level-tf
 version:        0.2.1
-cabal-version:  >= 1.2
-build-type:     Simple
 license:        BSD3
 license-file:   LICENSE
 copyright:      
+ Copyright (c) 2010 Corey O'Connor
  Copyright (c) 2008 Alfonso Acosta, Oleg Kiselyov, Wolfgang Jeltsch
                     and KTH's SAM group
                2008 Benedikt Huber (Rewrite using type families)
-author:         Alfonso Acosta
-maintainer:     unmaintained
+author:         Corey O'Connor, Alfonso Acosta
+homepage:       https://github.com/coreyoconnor/type-level-tf
+maintainer:     coreyoconnor@gmail.com
 stability:      alpha
 synopsis:       Type-level programming library (type families)
 description:
@@ -32,8 +32,13 @@ description:
  parameterized by the modulus).
 
 category:       Data
-tested-with:    GHC==6.9.0
+tested-with:    GHC==6.9.0, GHC==6.12.0, GHC==7.2.1
+cabal-version:  >= 1.6
+build-type:     Simple
 
+source-repository head
+    type:       git
+    location:   git://github.com/coreyoconnor/type-level-tf.git
 
 Library
   build-depends:   base == 4.*, template-haskell > 2.0, syb
@@ -46,4 +51,3 @@ Library
                    Data.TypeLevel.Num.Sets,
                    Data.TypeLevel.Num.Ops,
                    Data.TypeLevel.Num.Aliases.TH
-  ghc-options:	-Wall -O2
